@@ -1,0 +1,64 @@
+##Soru 1
+1) 22 < 27 no sorting
+2) 27 > 16 replace them
+  [22,16,27,2,18,6]
+3) 22 > 16 replace
+  [16,22,27,2,18,6]
+4) 2 < 27 swapping
+  [16,22,2,27,18,6]
+5) 2 < 22 swapping
+  [16,2,22,27,18,6]
+6) 16>2 swappping
+  [2,16,22,27,18,6]
+
+7)18<27 swapping
+  [2,16,22,18,27,6]
+8) 18 < 22 swapping
+  [2,16,18,22,27,6]
+9) 18 > 16 no swapping 
+
+10) 6 < 27 swapping
+ [2,16,18,22,6,27]
+11) 6<22 swap
+[2,16,18,6,22,27]
+12)6<18 swap
+[2,16,6,18,22,27]
+13)6<16 swap
+[2,6,16,18,22,27]
+------------------------------------------------------------------------------------------------------------------------------------
+[22,27,16,2,18,6] -> Selection Sort 
+  ilk önce en küçük olan sayı bulunur daha sonra ilk eleman ile yer değiştirilir.
+  -> 2 en küçük sayı olduğu için 22 sayısı ile yer değiştirip dizi terkar yazılır
+    [2,27,16,22,18,6]
+  -> ikinci eleman 27 elimde tutarak dizinin geri kalanında en küçük elemanı buluyorum bu da 6, 6 ile 27 yer değiştiriyorum
+    [2,6,16,22,18,27]
+  -> 3. eleman 16, elimde dizinin geri kalanına bakıyorum 16 dan küçük var mı yok o halde olduğu şekilde kalıyor diğer elemana geçiyorum
+  -> 4. eleman 22, 22 den küçük 18 var yer değiştiriyorum 
+    [2,27,16,18,22,27]
+  -> 5. eleman bakıyorum 22 yine daha küçüğü ok aynı kalıyor aynısı 6. eleman için de geçerli
+  
+  Big-o notation
+  n tane değer olduğunu var sayarsak bu dizide ilk önce n tane sayıyı karşılaştırıp en küçük elemanı buluyoruz yani "n" tane işlem yapıyoruz
+  en küçük elemanı bulunca dizide n-1 eleman kalmış oluyor aynı işlemi gerçekleştirerek n-1 tane eleman içinde en küçük elemanı buluyoruz yanı n-1 tane işlem yapmış olduk 
+  bu şekilde elimde 1 tane eleman kalana kadar işemli devam ettiriyoruz
+  bu sekildeki işlemlerin toplamı = n + (n-1) + (n-2) + .... +1 
+  n den 1 e kadar toplam demek = ( n . (n -1 ) ) / 2 = (n^2 - n)/2 
+  big o notation en dominant olan alınıyor burdai sonuç için n^2 bu değer 
+  Böylece big-o notation = O(n^2) olmuş oluyor
+  
+Time Complexity: Dizi sıralandıktan sonra 18 sayısı aşağıdaki case'lerden hangisinin kapsamına girer? Yazınız
+
+ Average case: Aradığımız sayının ortada olması
+Worst case: Aradığımız sayının sonda olması
+Best case: Aradığımız sayının dizinin en başında olması.
+
+Cevap: Average Case
+
+##Soru 2
+  [7,3,5,8,2,9,4,15,6] dizisinin Selection Sort'a göre ilk 4 adımını yazınız.
+  1.Adım : 7 ile 2 yer değiştirdi [2,3,5,8,7,9,4,15,6]
+  2.Adım : 3 den küçük yok kaldı ve sonraki elemana geçti
+  3.Adım : 5 ile 4 yer değiştirdi [2,3,4,8,7,9,5,15,6]
+  4.Adım : 8 ile 5 yer değiştirdi [2,3,4,5,7,9,8,15,6]
+  
+
